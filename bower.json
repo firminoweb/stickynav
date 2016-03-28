@@ -1,0 +1,25 @@
+{
+  "name": "StickyNav",
+  "authors": [
+    "Joao Firmino"
+  ],
+  "description": "Vanilla JS Stick Navbar using animation.css",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "vanilla",
+    "JS",
+    "Javascript",
+    "Stickybar",
+    "Stickyheader",
+    "Stickynavigation",
+    "animate"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/firminoweb/stickynav",
+  "twitter": "https://twitter.com/firminoweb",
+  "devDependencies": {
+    "bootstrap": "4.0",
+    "animate.css": "^3.5.1"
+  }
+}

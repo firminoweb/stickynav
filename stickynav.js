@@ -63,19 +63,31 @@
 
 	//
 	eventHandler = function () {
-		if(this.scrollY > settings.scrollY) {
-			defaults.mainNav.classList.add("fadeOut");
+		if (settings.scrollNav) {
+			if(this.scrollY > settings.scrollY) {
+				settings.mainNav.classList.add("fadeOut");
 
-			defaults.scrollNav.classList.remove("fadeOut");
-			defaults.scrollNav.classList.add("fadeIn");
-			defaults.scrollNav.classList.remove("hidden-xs-up");
-		}
-		else {
-			defaults.scrollNav.classList.remove("fadeIn");
-			defaults.scrollNav.classList.add("fadeOut");
+				settings.scrollNav.classList.remove("fadeOut");
+				settings.scrollNav.classList.add("fadeIn");
+				settings.scrollNav.classList.remove("hidden-xs-up");
+			}
+			else {
+				settings.scrollNav.classList.remove("fadeIn");
+				settings.scrollNav.classList.add("fadeOut");
 
-			defaults.mainNav.classList.remove("fadeOut");
+				settings.mainNav.classList.remove("fadeOut");
+			}
+		} else {
+			if(this.scrollY > settings.scrollY) {
+				settings.mainNav.classList.add("bg-inverse");
+				settings.mainNav.classList.add("fadeIn");
+			}
+			else {
+				settings.mainNav.classList.remove("bg-inverse");
+				settings.mainNav.classList.remove("fadeIn");
+			}	
 		}
+
 
 		settings.callback();
 
